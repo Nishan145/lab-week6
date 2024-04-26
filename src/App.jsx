@@ -21,6 +21,7 @@ export default function App() {
     setCoins((coins) => coins + 1);
   }
 
+  //try making a button component
   function buyUpgrade(upgrade) {
     if (coins >= upgrade.cost) {
       console.log("buy an upgrade", upgrade);
