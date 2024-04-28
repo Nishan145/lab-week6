@@ -43,6 +43,11 @@ export default function App() {
     }
   }
 
+  function resetGame() {
+    setCoins(0);
+    setCps(1);
+  }
+
   console.log("current coins", coins);
   console.log("current CPS", cps);
 
@@ -66,6 +71,7 @@ export default function App() {
           </button>
         </div>
       ))}
+      <button onClick={resetGame}>Reset</button>
       <Footer className="footer" />
     </div>
   );
