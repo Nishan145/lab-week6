@@ -48,24 +48,25 @@ export default function App() {
 
   return (
     <div>
-      <Header />
+      <Header className="header" />
       {/* <button onClick={addCoins}>Steal 1 Gold Coin</button> */}
       <img
         src={coinImg}
         onClick={addCoins}
         style={{ width: "170px", height: "120px" }}
       />
-      <p>You have stolen this many {coins} coins</p>
+      <p>You have stolen {coins} coins</p>
       <p>Your&apos;e earning {cps} coins per second </p>
-      <h2>Upgrade to steal Gold faster!:</h2>
+      <h2>Upgrade to steal Gold faster!</h2>
       {upgrades.map((upgrade, index) => (
         <div key={index}>
           <button onClick={() => buyUpgrade(upgrade)}>
-            To get:{upgrade.increment} it will Cost: {upgrade.cost}
+            To get: {upgrade.increment} Coins per Second it will Cost:{" "}
+            {upgrade.cost}
           </button>
         </div>
       ))}
-      <Footer />
+      <Footer className="footer" />
     </div>
   );
 }
