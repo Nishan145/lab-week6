@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <p>&copy; 2024 Gallywix&apos;s Bank Heist. All rights reserved </p>
     </footer>
   );
