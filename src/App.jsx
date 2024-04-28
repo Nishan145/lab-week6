@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import upgrades from "./stores/upgrades";
 import coinImg from "./assets/Coin.png";
-
+import Header from "./component/Header.jsx";
+import Footer from "./component/Footer.jsx";
 export default function App() {
   const [coins, setCoins] = useState(0);
   const [cps, setCps] = useState(1);
@@ -37,13 +38,16 @@ export default function App() {
 
   return (
     <div>
-      <h1>Gallywix's Bank heist</h1>
-      <p>Click to Steal Gold Coins</p>
+      <Header />
       {/* <button onClick={addCoins}>Steal 1 Gold Coin</button> */}
-      <img src={coinImg} onClick={addCoins} />
+      <img
+        src={coinImg}
+        onClick={addCoins}
+        style={{ width: "170px", height: "120px" }}
+      />
       <p>You have stolen this many {coins} coins</p>
-      <p>You're earning {cps} coins per second </p>
-      <h2>Upgrade for faster coin gains:</h2>
+      <p>Your&apos;e earning {cps} coins per second </p>
+      <h2>Upgrade to steal Gold faster!:</h2>
       {upgrades.map((upgrade, index) => (
         <div key={index}>
           <button onClick={() => buyUpgrade(upgrade)}>
@@ -51,6 +55,7 @@ export default function App() {
           </button>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }

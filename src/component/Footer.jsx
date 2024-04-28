@@ -1,0 +1,8 @@
+export function Footer() {
+  return (
+    <footer>
+      <p>&copy; 2024 Gallywix&apos;s Bank Heist. All rights reserved </p>
+    </footer>
+  );
+}
+export default Footer;
