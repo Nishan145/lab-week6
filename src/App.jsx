@@ -3,9 +3,19 @@ import upgrades from "./stores/upgrades";
 import coinImg from "./assets/Coin.png";
 import Header from "./component/Header.jsx";
 import Footer from "./component/Footer.jsx";
+
 export default function App() {
-  const [coins, setCoins] = useState(0);
-  const [cps, setCps] = useState(1);
+  const [coins, setCoins] = useState(
+    parseInt(localStorage.getItem("Coins")) || 0
+  );
+  const [cps, setCps] = useState(
+    parseInt(localStorage.getItem("coinsPerSecond")) || 1
+  );
+
+  useEffect(() => {
+    localStorage.setItem("coins", coins.toString());
+    localStorage.setItem("coinsPerSecond", cps.toString());
+  }, [coins, cps]);
 
   useEffect(() => {
     const intervalCoins = setInterval(() => {
