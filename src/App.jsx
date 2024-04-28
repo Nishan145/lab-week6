@@ -6,7 +6,7 @@ import Footer from "./component/Footer.jsx";
 
 export default function App() {
   const [coins, setCoins] = useState(
-    parseInt(localStorage.getItem("Coins")) || 0
+    parseInt(localStorage.getItem("coins")) || 0
   );
   const [cps, setCps] = useState(
     parseInt(localStorage.getItem("coinsPerSecond")) || 1
