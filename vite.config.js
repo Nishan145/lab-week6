@@ -6,12 +6,14 @@
 //   plugins: [react()],
 // })
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  root: "./", // Ensure this points to the correct directory
+  plugins: [react()],
+  root: ".", // Use the root directory
   build: {
     rollupOptions: {
-      input: "./index.html", // Ensure Vite knows where to find the entry
+      input: "./index.html", // Tell Vite that index.html is in the root
     },
   },
 });
