@@ -19,6 +19,10 @@ export const upgrades = [
     cost: 20000,
     increment: 200,
   },
+  {
+    cost: 30000,
+    increment: 300,
+  },
 ];
 
 export default upgrades;
